@@ -1,4 +1,4 @@
-# 🚀 Construcción de Compilador - Analizador Léxico (Fase 1)
+# Construcción de Compilador
 
 Este proyecto implementa la primera fase del front-end de un compilador: el **Analizador Léxico (Lexer)**. Está desarrollado en Python utilizando la librería **PLY (Python Lex-Yacc)** y es capaz de tokenizar código fuente de un lenguaje con soporte para programación orientada a objetos (POO), múltiples tipos de datos y operadores complejos.
 
