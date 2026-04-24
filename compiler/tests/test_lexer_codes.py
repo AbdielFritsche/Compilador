@@ -13,16 +13,23 @@ def test_all_txt_files(file_path):
     
     filename = os.path.basename(file_path)
     print(f"\n\n--- Tokenizando archivo: {filename} ---")
-    
+
     with open(file_path, "r") as f:
         code = f.read()
-    
+
+    lines = code.split('\n')
+
+    lexer.lineno = 1 
     lexer.input(code)
-    
-    print(f"{'TOKEN_ID':<15} | CONTENIDO")
-    print("-" * 30)
-    
+
+    current_line = -1
+
     for tok in lexer:
-        print(f"{tok.type:<15} | {str(tok.value)}")
+        if tok.lineno != current_line:
+            current_line = tok.lineno
+            line_code = lines[current_line - 1].strip() if current_line <= len(lines) else ""
+            print(f"\nLinea {current_line}:    {line_code}")
+        
+        print(f"{tok.type:<15} value: {str(tok.value):<10} lexpos: {tok.lexpos}")
         
         assert tok.type is not None
