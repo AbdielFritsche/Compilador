@@ -1,0 +1,31 @@
+program input4;
+
+var 
+    cadenaA, cadenaB, resultadoStr : string;
+    numero1, numero2 : int;
+    logica1 : bool;
+main {
+    cadenaA = "Parte 1";
+    cadenaB = "Parte 2";
+    numero1 = 50;
+    numero2 = 10;
+    logica1 = true;
+
+    resultadoStr = cadenaA + cadenaB;
+
+    numero1 = numero2 * logica1;
+
+    if (cadenaA == numero1)
+    {
+        numero1 = 0;
+    };
+
+    if (cadenaB)
+    {
+        logica1 = false;
+    }
+    else
+    {
+        logica1 = true;
+    };
+} end

@@ -1,0 +1,23 @@
+program input3;
+
+var 
+    texto, saludo : string;
+    bandera, activo : bool;
+    valor, contador, valor : int; 
+main {
+    texto = "Hola Mundo";
+    bandera = true;
+    valor = 10;
+    activo = false;
+
+    saludo = bandera;
+
+    contador = 3.1416;
+
+    activo = "verdadero";
+
+    fantasma = 100;
+    
+    texto = "Adios";
+    valor = valor + 1;
+} end

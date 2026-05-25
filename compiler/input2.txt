@@ -1,0 +1,51 @@
+program input2;
+
+var 
+    contador, limite, incremento : int;
+    costo, total, ajuste : float;
+    nombre, estado : string;
+    esValido, tieneDescuento : bool;
+
+main {
+    contador = 0;
+    limite = 100;
+    incremento = 5;
+    
+    costo = 250.50;
+    ajuste = 10.0;
+    
+    nombre = "Sistema de Control";
+    estado = "Iniciado";
+    
+    esValido = true;
+    tieneDescuento = false;
+
+    total = costo + ajuste + incremento;
+
+    if (esValido == true)
+    {
+        if (total > 200.0)
+        {
+            if (tieneDescuento != true)
+            {
+                estado = "Aprobado sin descuento";
+                total = total - 5.0;
+            }
+            else
+            {
+                estado = "Aprobado con descuento";
+            };
+        }
+        else
+        {
+            estado = "Rechazado por monto";
+            esValido = false;
+        };
+    }
+    else
+    {
+        estado = "Bloqueado";
+    };
+    
+    contador = contador + 1;
+} end

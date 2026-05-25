@@ -1,0 +1,36 @@
+program input5;
+
+var 
+    x, y, z : int;
+    promedio : float;
+    nombreUsuario : string;
+    accesoAutorizado : bool;
+main {
+    x = 10;
+    y = 20;
+    nombreUsuario = "Admin";
+    accesoAutorizado = true;
+
+    z = x + y * 2;
+
+    if (accesoAutorizado == true)
+    {
+        if (x < y)
+        {
+            var_temp = 10;
+            promedio = z / accesoAutorizado;
+        }
+        else
+        {
+            nombreUsuario = 404;
+        };
+    }
+    else
+    {
+        accesoAutorizado = false;
+        promedio = 0.0;
+    };
+
+    z = nombreUsuario - x;
+
+} end
